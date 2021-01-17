@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0ceeeef8;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -60px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 28.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: rgba(20, 122, 218, 0.699);
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Photo Gallery</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Drinks')"> Drinks</button>
+  <button class="btn" onclick="filterSelection('Parks')"> Parks</button>
+  <button class="btn" onclick="filterSelection('Expressions')"> Expressions</button>
+</div>
+
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery: hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width : 100%;
+  height: auto ;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <div class="column Parks">
+    <div class="content">
+      <img src="https://www.parkgrandlancastergate.co.uk/blog/wp-content/uploads/2018/01/hyde-poark-2.jpg" alt="Trees" style="width:100%">
+      <h4>Trees inside the park</h4>
+      <p>Lets go for walk in the park</p>
+    </div>
+  </div>
+  <div class="column Parks">
+    <div class="content">
+    <img src="https://www.publicdomainpictures.net/pictures/20000/velka/lake-in-the-park-2-126851297530390FVC.jpg" alt="Lake" style="width:100%" >
+      <h4>Lake in the park</h4>
+      <p>Lets go near the lake..</p>
+    </div>
+  </div>
+  <div class="column Parks">
+    <div class="content">
+    <img src="https://previews.123rf.com/images/odasho/odasho1708/odasho170800083/84852794-sunny-park.jpg" alt="Sunny" style="width:100%">
+      <h4>The park the morning</h4>
+      <p>It is sunny..</p>
+    </div>
+    </div>
+     <div class="column Expressions">
+    <div class="content">
+      <img src="https://www.marylebonephysio.com/wp-content/uploads/2016/04/No-Pain-No-Gain.jpg" alt="No pain" style="width:100%">
+      <h4>No Pain No Gain!</h4>
+      <p> This how we make a progress</p>
+    </div>
+    </div>
+  <div class="column Expressions">
+    <div class="content">
+    <img src= https://image.shutterstock.com/image-vector/vector-illustration-lettering-calligraphy-motivating-600w-537657316.jpg style="width:100%"style="width:100%">
+      <h4>Stay strong!</h4
+      <p> Do not despair</p>
+    </div>
+  </div>
+  <div class="column Expressions">
+    <div class="content">
+    <img src="https://i1.wp.com/islandgirlmusic.com/wp-content/uploads/2015/08/hope5.jpg?ssl=1" alt="Hope" style="width:100%">
+      <h4>Never lose hope</h4>
+      <p> It is never too late..</p>
+    </div>
+  </div>
+
+<div class="column Drinks">
+    <div class="content">
+    <img src=" https://media3.s-nbcnews.com/j/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p_67dfb6820f7d3898b5486975903c2e51.fit-1240w.jpg" alt="Hope" style="width:100%">
+      <h4>Coffee</h4>
+      <p></p>
+    </div>
+  </div>
+  
+  <div class="column Drinks">
+    <div class="content">
+    <img src="  https://miro.medium.com/max/875/1*pJsrTGA1D-BxwxeZniRCUw.jpeg" alt="Hope" style="width:100%">
+      <h4>Tea</h4>
+      <p></p>
+    </div>
+  </div>
+  
+  <div class="column Drinks">
+    <div class="content">
+    <img src="  https://i0.wp.com/citrusindustry.net/wp-content/uploads/2019/07/orange-juice-shutterstock_380775292.jpg?resize=1024%2C683&ssl=1" alt="Hope" style="width:100%">
+      <h4>Orange juice</h4>
+      <p></p>
+    </div>
+  </div>
+  
+ 
+<!-- Portfolio Gallery Grid -->
+
+  </div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
